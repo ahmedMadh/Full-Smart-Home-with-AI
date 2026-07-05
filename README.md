@@ -561,15 +561,11 @@ Python receives MQTT data in real time and stores it inside a structured CSV dat
 ```
 ---
 
-<div align="center">
+---
 
-## ⭐ Enjoyed This Project?
+## ⭐ Support This Project
 
-If you found this project helpful, please consider giving it a **⭐ Star** on GitHub.
+If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
 
-It motivates me to keep building and sharing more AI & IoT projects.
-
-**Thank you for your support! 🚀❤️**
-
-</div>
+Your support is greatly appreciated and encourages future development.
 
