@@ -105,50 +105,29 @@ Unlike traditional smart home projects, this system is designed not only for mon
 
 # 🏗 System Architecture
 
-```text
-                    +----------------------+
-                    |      Sensors         |
-                    |----------------------|
-                    | DHT22                |
-                    | MQ-2                 |
-                    | PIR                  |
-                    | LDR                  |
-                    | Ultrasonic           |
-                    +----------+-----------+
-                               |
-                               |
-                               v
-                     +------------------+
-                     |      ESP32       |
-                     +--------+---------+
-                              |
-          +-------------------+-------------------+
-          |                                       |
-          |                                       |
-          v                                       v
+```mermaid
+flowchart TD
 
-   ThingSpeak Cloud                       MQTT Broker
-          |                                       |
-          |                                       |
-          v                                       v
+A[ٍSensors Values] --> B{ESP32}
 
-  Live IoT Dashboard                    Jupyter Notebook
-                                                |
-                                                |
-                                                v
+B -- Part one --> C[MQTT Broker]
 
-                                         CSV Dataset
-                                                |
-                                                |
-                                                v
+C --> D[Jupyter NoteBook]
 
-                                        Machine Learning
-                                                |
-                                                |
-                                                v
+D --> E[CSV Dataset]
 
-                                           AI Prediction
-````
+E --> F[Machean Learning]
+
+B -- Part tow --> G{ThingSpeak Cloud}
+
+G --> H[Live IoT Dashboard]
+
+B -- Part Three --> M{Blynk IoT}
+
+M --> I[User Controal The System]
+
+M --> S[Show Current Datan to the User]
+```
 
 ---
 
