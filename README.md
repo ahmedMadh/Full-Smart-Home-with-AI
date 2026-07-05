@@ -369,29 +369,32 @@ Repeat
 ---
 
 # 📦 Firmware Modules
+```mermaid
+mindmap
+  root((ESP32 Firmware))
 
-The ESP32 firmware is divided into several independent modules.
+    Sensor Module
 
-## 🌡 Sensor Module
+      DHT22
 
-Responsible for collecting all environmental readings.
+      MQ2
 
-**Sensors**
+      PIR
 
-- DHT22
-- MQ-2
-- PIR
-- LDR
-- HC-SR04
+      LDR
 
-Output:
+      Ultrasonic
 
-- Temperature
-- Humidity
-- Gas Level
-- Motion Status
-- Light Level
-- Water Tank Distance
+    Automation Module
+
+    Safety Module
+
+    Cloud Module
+
+    Manual Control
+
+    Communication
+```
 
 ---
 
