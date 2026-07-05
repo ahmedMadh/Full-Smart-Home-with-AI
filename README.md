@@ -262,8 +262,6 @@ Instead of writing all functionality inside one long program, the firmware is di
 
 ```text
 
-<p align="center">
-
 setup()
 
 ↓
@@ -285,8 +283,6 @@ Connect Blynk
 ↓
 
 Start Sensors
-
-</p>
 
 ```
 
