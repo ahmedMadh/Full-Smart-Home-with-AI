@@ -550,13 +550,27 @@ ThingSpeak provides a continuously updated visualization dashboard that allows u
 
 ---
 
+## 📊 Blynk Pipeline
+
+```mermaid
+flowchart LR
+ESP32 --> Wifi
+Wifi --> Blynk Server
+Blynk Server --> A[Live Data]
+Blynk Server --> B[System User Control interface]
+```
+
+ThingSpeak provides a continuously updated visualization dashboard that allows users to monitor sensor readings from anywhere.
+
+---
+
 ## 📡 MQTT Pipeline
 
 ```mermaid
 flowchart LR
 ESP32 --> MQTT_Broker
-MQTT_Broker --> Python_Client
-Python_Client --> CSV_Dataset
+MQTT_Broker --> Jupyter Notebook
+Jupyter Notebook --> CSV_Dataset
 CSV_Dataset --> AI_Model
 ```
 
@@ -564,33 +578,6 @@ Unlike ThingSpeak, the MQTT channel is dedicated to collecting structured datase
 
 ---
 
-# 🧠 Artificial Intelligence Pipeline
-
-After collecting sensor readings, the data passes through several processing stages before becoming suitable for Machine Learning.
-
-```mermaid
-flowchart LR
-
-ESP32
-
---> MQTT
-
---> Python
-
---> CSV Dataset
-
---> Data Cleaning
-
---> Feature Selection
-
---> Machine Learning
-
---> Prediction
-```
-
-The generated dataset forms the foundation for future predictive models capable of analyzing environmental patterns and supporting intelligent decision making.
-
----
 
 ## Jupyter Notebook
 
