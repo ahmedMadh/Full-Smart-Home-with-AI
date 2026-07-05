@@ -557,11 +557,11 @@ flowchart LR
 A[ESP32] --> B[Wifi]
 B[Wifi] --> C[Blynk Server]
 C[Blynk Server] --> D[Live Data]
-C --> M[System User Control interface]
+C --> M[An interface that allows the user to control the system.
 M --> A
 ```
 
-ThingSpeak provides a continuously updated visualization dashboard that allows users to monitor sensor readings from anywhere.
+Blynk provides users with access via the web or a mobile app, displaying real-time data and allowing them to modify the system.
 
 ---
 
