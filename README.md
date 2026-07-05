@@ -600,20 +600,14 @@ The generated dataset forms the foundation for future predictive models capable 
 
 ---
 
-# 📊 Dashboard & Visualization
-
-The project provides multiple visualization methods for monitoring the smart home.
-
-## ThingSpeak
+## 📊 ThingSpeak Dashboard
 
 ```mermaid
-- Live Temperature Chart
-- Live Humidity Chart
-- Live Gas Chart
-- Live Motion Chart
-- Live Light Chart
-- Live Water Level Chart
-```
+flowchart LR
+ESP32 --> HTTP
+HTTP --> ThingSpeak
+ThingSpeak --> Live_Charts
+Live_Charts --> Remote_Monitoring
 
 📷 *(Insert ThingSpeak screenshot here)*
 
