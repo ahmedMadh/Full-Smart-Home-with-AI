@@ -197,26 +197,27 @@ It demonstrates how IoT and AI can work together within one complete architectur
 
 The smart home system is built using six environmental sensors and multiple actuators connected to an ESP32 development board.
 
+```mermaid
 flowchart TB
 
 subgraph Sensors
-DHT[DHT22]
-MQ2[MQ-2]
-PIR[PIR]
-LDR[LDR]
-ULT[Ultrasonic]
+    DHT[DHT22]
+    MQ2[MQ-2]
+    PIR[PIR]
+    LDR[LDR]
+    ULT[Ultrasonic]
 end
 
 subgraph ESP32
-ESP[ESP32 Controller]
+    ESP[ESP32 Controller]
 end
 
 subgraph Actuators
-Fan[Fan]
-Servo[Servo]
-Pump[Water Pump]
-Light[Lighting]
-Alarm[Alarm]
+    Fan[Fan]
+    Servo[Smart Window]
+    Pump[Water Pump]
+    Light[Lighting]
+    Alarm[Alarm System]
 end
 
 DHT --> ESP
@@ -230,6 +231,7 @@ ESP --> Servo
 ESP --> Pump
 ESP --> Light
 ESP --> Alarm
+```
 
 ---
 
