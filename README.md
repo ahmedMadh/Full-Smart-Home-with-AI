@@ -558,6 +558,7 @@ A[ESP32] --> B[Wifi]
 B[Wifi] --> C[Blynk Server]
 C[Blynk Server] --> D[Live Data]
 C --> M[System User Control interface]
+M --> A
 ```
 
 ThingSpeak provides a continuously updated visualization dashboard that allows users to monitor sensor readings from anywhere.
