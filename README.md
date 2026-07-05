@@ -558,8 +558,6 @@ Python receives MQTT data in real time and stores it inside a structured CSV dat
 - 📁 Check collected data saved in `sensor_data.csv`
 - 🧠 Analyze data using Jupyter Notebook
 
-```
-
 
 # ⭐ Support This Project
 
