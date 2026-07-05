@@ -319,37 +319,6 @@ Upload ThingSpeak Data
 
 Repeat
 ```
-
----
-
-# 📦 Firmware Modules
-```mermaid
-mindmap
-  root((ESP32 Firmware))
-
-    Sensor Module
-
-      DHT22
-
-      MQ2
-
-      PIR
-
-      LDR
-
-      Ultrasonic
-
-    Mode
-
-      Automation Mode
-
-      Manual Control Mode
-
-    Cloud Module
-
-    Communication
-```
-
 ---
 
 ## 🚨 Safety Module
