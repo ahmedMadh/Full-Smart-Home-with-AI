@@ -137,7 +137,8 @@ It demonstrates how IoT and AI can work together within one complete architectur
 The smart home system is built using six environmental sensors and multiple actuators connected to an ESP32 development board.
 
 Illustrative image from the Wokwi simulator.
-![Uploading Screenshot 2026-07-04 160312.png…]()
+
+<![Uploading Screenshot 2026-07-04 160312.png…]()>
 
 
 
