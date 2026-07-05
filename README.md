@@ -532,19 +532,32 @@ Python receives MQTT data in real time and stores it inside a structured CSV dat
 
 ---
 
-# ▶ How to Use
+## ▶ How to Use
 
-1. Assemble the project components, ensuring you account for or update the pin numbers in the code.
+1. Assemble the hardware components and ensure that the pin numbers in the Arduino code match your wiring setup.
 
-2. Paste the code found in skitch.ino into the Arduino IDE.
+2. Open the Arduino IDE and upload the firmware:
+   - File: `sketch.ino`
 
-3. Install Jupyter via your computer's command prompt using the command: `pip install notebook`.
+3. Install Jupyter Notebook (if not installed already):
 
-4. Launch Jupyter by running the command `jupyter notebook`.
+4. Launch Jupyter Notebook:
 
-5. Create a file and insert the code found in `Server.py` to set up a local server.
 
-6. You can now easily run your system using the Arduino IDE. You will be able to view real-time data and control the system via Blynk IoT, visualize data graphs on ThingSpeak, and observe that the data is saved to a CSV file on your computer.
+5. Run the Python server:
+- Create a Python file
+- Copy the code from `server.py`
+- Execute it to start the local server
+
+6. Start the system:
+- Run ESP32 from Arduino IDE
+- Connect to WiFi
+
+7. Monitor the system:
+- 📱 Control devices via Blynk IoT (mobile app)
+- 📊 View real-time graphs on ThingSpeak
+- 📁 Check collected data saved in `sensor_data.csv`
+- 🧠 Analyze data using Jupyter Notebook
 
 ```
 
