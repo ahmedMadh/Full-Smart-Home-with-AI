@@ -546,8 +546,5 @@ Python receives MQTT data in real time and stores it inside a structured CSV dat
 
 6. You can now easily run your system using the Arduino IDE. You will be able to view real-time data and control the system via Blynk IoT, visualize data graphs on ThingSpeak, and observe that the data is saved to a CSV file on your computer.
 
-````
-
-
 ```
 
