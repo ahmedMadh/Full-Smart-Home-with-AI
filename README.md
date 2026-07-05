@@ -190,8 +190,7 @@ This project goes one step further by transforming live sensor readings into a s
 
 It demonstrates how IoT and AI can work together within one complete architecture instead of existing as separate technologies.
 
-```
-````markdown
+
 ---
 
 # 🛠 Hardware Components
