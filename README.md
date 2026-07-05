@@ -554,10 +554,10 @@ ThingSpeak provides a continuously updated visualization dashboard that allows u
 
 ```mermaid
 flowchart LR
-ESP32 --> Wifi
-Wifi --> Blynk Server
-Blynk Server --> A[Live Data]
-Blynk Server --> B[System User Control interface]
+A[ESP32] --> B[Wifi]
+B[Wifi] --> C[Blynk Server]
+C[Blynk Server] --> D[Live Data]
+C --> M[System User Control interface]
 ```
 
 ThingSpeak provides a continuously updated visualization dashboard that allows users to monitor sensor readings from anywhere.
