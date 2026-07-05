@@ -32,12 +32,7 @@ An intelligent Smart Home platform that combines **ESP32**, **IoT**, **Cloud Com
 - Code Architecture
 - Automation Logic
 - Cloud Communication
-- AI Pipeline
-- Installation
-- Usage
-- Screenshots
-- Future Improvements
-- Author
+
 
 ---
 
@@ -539,10 +534,11 @@ Python receives MQTT data in real time and stores it inside a structured CSV dat
 2. Open the Arduino IDE and upload the firmware:
    - File: `sketch.ino`
 
-3. Install Jupyter Notebook (if not installed already):
+3. Install Jupyter Notebook:
+   - pip install notebook
 
-4. Launch Jupyter Notebook:
-
+4. Launch Jupyter Notebook: 
+   - jupyter notebook
 
 5. Run the Python server:
 - Create a Python file
