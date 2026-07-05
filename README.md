@@ -1,16 +1,12 @@
-````markdown
-<p align="center">
+
 
 # 🏠 AI Smart Home
 ### *An End-to-End IoT & Artificial Intelligence Smart Home System*
 
 An intelligent Smart Home platform that combines **ESP32**, **IoT**, **Cloud Computing**, **MQTT**, **Machine Learning**, and **Real-Time Dashboards** into one integrated system capable of monitoring, automation, remote control, and AI-driven analytics.
 
----
 
-<p align="center">
-
-![ESP32](https://img.shields.io/badge/ESP32-IoT-blue?style=for-the-badge)
+![ESP32]
 ![Arduino](https://img.shields.io/badge/Arduino-C%2B%2B-success?style=for-the-badge)
 ![MQTT](https://img.shields.io/badge/MQTT-HiveMQ-orange?style=for-the-badge)
 ![Blynk](https://img.shields.io/badge/Blynk-IoT-green?style=for-the-badge)
