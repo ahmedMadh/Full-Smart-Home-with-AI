@@ -339,13 +339,13 @@ mindmap
 
       Ultrasonic
 
-    Automation Module
+    Mode
 
-    Safety Module
+      Automation Mode
+
+      Manual Control Mode
 
     Cloud Module
-
-    Manual Control
 
     Communication
 ```
