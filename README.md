@@ -131,40 +131,6 @@ M --> S[Show Current Datan to the User]
 
 ---
 
-# 🔄 Complete Data Flow
-
-```mermaid
-flowchart LR
-
-subgraph Smart Home
-SENSORS["🌡️ Sensors"]
-ESP["⚡ ESP32"]
-SENSORS --> ESP
-end
-
-subgraph Cloud Services
-BLYNK["📱 Blynk"]
-TS["☁️ ThingSpeak"]
-MQTT["📡 MQTT Broker"]
-end
-
-subgraph AI Platform
-PY["🐍 Python"]
-CSV["📄 CSV Dataset"]
-ML["🧠 Machine Learning"]
-end
-
-ESP --> BLYNK
-ESP --> TS
-ESP --> MQTT
-
-MQTT --> PY
-PY --> CSV
-CSV --> ML
-```
-
----
-
 # 💡 Why This Project?
 
 Most IoT projects stop after displaying sensor values on a dashboard.
