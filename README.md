@@ -223,24 +223,27 @@ The project integrates embedded programming, cloud computing, data engineering, 
 # 📂 Project Structure
 
 ```text
-AI-Smart-Home
+AI-Smart-Home/
 │
-├── Arduino_Code
-│     └── smart_home.ino
+├── Arduino_Code/            # كود ESP32 / Arduino
+│   └── smart_home.ino
 │
-├── Python
-│     ├── mqtt_receiver.py
-│     ├── dashboard.ipynb
-│     ├── ai_model.ipynb
-│     └── server.py
+├── Python/                  # بايثون (MQTT + AI + Dashboard)
+│   ├── mqtt_receiver.py
+│   ├── server.py
+│   ├── dashboard.ipynb
+│   └── ai_model.ipynb
 │
-├── Dataset
-│     └── sensor_data.csv
+├── Dataset/                 # بيانات الحساسات
+│   └── sensor_data.csv
 │
-├── Images
+├── Images/                  # صور المشروع والداشبورد
 │
-├── Report
-│     └── AI_Full_Smart_Home_Project_Report.pdf
+├── Video/                   # فيديو شرح المشروع (مهم جدًا)
+│   └── demo.mp4
+│
+├── Report/                  # تقرير PDF
+│   └── AI_Full_Smart_Home_Project_Report.pdf
 │
 └── README.md
 ```
