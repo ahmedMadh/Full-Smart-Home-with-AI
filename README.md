@@ -540,14 +540,10 @@ Each service has a different responsibility within the overall system architectu
 
 ```mermaid
 flowchart LR
-
 ESP32 --> HTTP
-
 HTTP --> ThingSpeak
-
-ThingSpeak --> Live Charts
-
-Live Charts --> Remote Monitoring
+ThingSpeak --> Live_Charts
+Live_Charts --> Remote_Monitoring
 ```
 
 ThingSpeak provides a continuously updated visualization dashboard that allows users to monitor sensor readings from anywhere.
@@ -558,14 +554,10 @@ ThingSpeak provides a continuously updated visualization dashboard that allows u
 
 ```mermaid
 flowchart LR
-
-ESP32 --> MQTT Broker
-
-MQTT Broker --> Python Client
-
-Python Client --> CSV Dataset
-
-CSV Dataset --> AI Model
+ESP32 --> MQTT_Broker
+MQTT_Broker --> Python_Client
+Python_Client --> CSV_Dataset
+CSV_Dataset --> AI_Model
 ```
 
 Unlike ThingSpeak, the MQTT channel is dedicated to collecting structured datasets for further processing and Artificial Intelligence applications.
