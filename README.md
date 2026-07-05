@@ -25,13 +25,16 @@ An intelligent Smart Home platform that combines **ESP32**, **IoT**, **Cloud Com
 - Project Overview
 - Key Features
 - System Architecture
-- Data Flow
+- Why This Project?
 - Hardware Components
 - Software Stack
 - Folder Structure
 - Code Architecture
+- Main Functions
+- Code Design Philosophy
 - Automation Logic
 - Cloud Communication
+- How to Use
 
 
 ---
@@ -527,7 +530,7 @@ Python receives MQTT data in real time and stores it inside a structured CSV dat
 
 ---
 
-## ▶ How to Use
+# ▶ How to Use
 
 1. Assemble the hardware components and ensure that the pin numbers in the Arduino code match your wiring setup.
 
