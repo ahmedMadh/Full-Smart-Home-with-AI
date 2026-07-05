@@ -191,5 +191,265 @@ This project goes one step further by transforming live sensor readings into a s
 It demonstrates how IoT and AI can work together within one complete architecture instead of existing as separate technologies.
 
 ```
+````markdown
+---
+
+# 🛠 Hardware Components
+
+The smart home system is built using six environmental sensors and multiple actuators connected to an ESP32 development board.
+
+| Component | Function |
+|-----------|----------|
+| ESP32 | Main microcontroller responsible for data acquisition, automation, and cloud communication |
+| DHT22 | Measures temperature and humidity |
+| MQ-2 Gas Sensor | Detects gas leakage and smoke concentration |
+| PIR Motion Sensor | Detects human movement |
+| LDR Sensor | Measures ambient light intensity |
+| HC-SR04 Ultrasonic Sensor | Monitors the water tank level |
+| Servo Motor | Opens and closes the smart window |
+| Relay Module | Controls the fan and water pump |
+| LED | Visual alarm indicator |
+| Buzzer | Audible emergency alarm |
+
+---
+
+# 💻 Software Stack
+
+The project integrates embedded programming, cloud computing, data engineering, and Artificial Intelligence into one complete workflow.
+
+| Technology | Purpose |
+|------------|---------|
+| Arduino IDE | ESP32 programming |
+| Wokwi | Circuit simulation |
+| MQTT (HiveMQ) | Real-time data streaming |
+| ThingSpeak | Cloud monitoring platform |
+| Blynk IoT | Remote mobile control |
+| Python | Data processing |
+| Jupyter Notebook | AI development environment |
+| Flask | Local API Server |
+| Pandas | Dataset management |
+| Paho MQTT | MQTT communication |
+| Machine Learning | Data prediction |
+
+---
+
+# 📂 Project Structure
+
+```text
+AI-Smart-Home
+│
+├── Arduino_Code
+│     └── smart_home.ino
+│
+├── Python
+│     ├── mqtt_receiver.py
+│     ├── dashboard.ipynb
+│     ├── ai_model.ipynb
+│     └── server.py
+│
+├── Dataset
+│     └── sensor_data.csv
+│
+├── Images
+│
+├── Report
+│     └── AI_Full_Smart_Home_Project_Report.pdf
+│
+└── README.md
+```
+
+The repository is organized so that every project layer is separated into its own directory, making the system easier to understand, maintain, and extend.
+
+---
+
+# ⚙ Code Architecture
+
+Instead of writing all functionality inside one long program, the firmware is divided into logical modules, where each module is responsible for a specific task.
+
+```text
+setup()
+
+↓
+
+Initialize Hardware
+
+↓
+
+Connect WiFi
+
+↓
+
+Connect MQTT
+
+↓
+
+Connect Blynk
+
+↓
+
+Start Sensors
+```
+
+---
+
+## Main Loop
+
+The ESP32 continuously executes the following cycle:
+
+```text
+Read Sensors
+
+↓
+
+Update Sensor Variables
+
+↓
+
+Check Safety Conditions
+
+↓
+
+Execute Automation
+
+↓
+
+Publish MQTT Data
+
+↓
+
+Upload ThingSpeak Data
+
+↓
+
+Repeat
+```
+
+---
+
+# 📦 Firmware Modules
+
+The ESP32 firmware is divided into several independent modules.
+
+## 🌡 Sensor Module
+
+Responsible for collecting all environmental readings.
+
+**Sensors**
+
+- DHT22
+- MQ-2
+- PIR
+- LDR
+- HC-SR04
+
+Output:
+
+- Temperature
+- Humidity
+- Gas Level
+- Motion Status
+- Light Level
+- Water Tank Distance
+
+---
+
+## 🚨 Safety Module
+
+Continuously evaluates dangerous situations.
+
+Possible events:
+
+- Gas leakage
+- High temperature
+- Fire
+- Safe state
+
+Automatic response:
+
+- Activate buzzer
+- Turn alarm LED ON
+- Open window
+- Start ventilation fan
+
+---
+
+## 🤖 Automation Module
+
+Handles all smart home decisions without user interaction.
+
+Automation includes:
+
+- Smart ventilation
+- Smart lighting
+- Water tank management
+- Emergency handling
+
+Each subsystem operates independently while sharing the same sensor data.
+
+---
+
+## ☁ Cloud Module
+
+Responsible for transmitting sensor readings.
+
+The ESP32 simultaneously sends data to:
+
+- ThingSpeak
+- MQTT Broker
+
+This allows the same sensor readings to be used for both live monitoring and AI processing without interfering with each other.
+
+---
+
+## 📱 Manual Control Module
+
+Users can manually operate the smart home through the Blynk mobile application.
+
+Available controls include:
+
+- Window
+- Fan
+- Lighting
+- Water Pump
+- Alarm Reset
+- Auto Mode
+
+When Auto Mode is enabled, the ESP32 automatically manages all devices according to the predefined control logic.
+
+---
+
+# 🧩 Main Functions
+
+| Function | Responsibility |
+|----------|----------------|
+| setup() | Initializes the entire system |
+| loop() | Main execution cycle |
+| NewValues() | Reads all sensors |
+| alarmSystem() | Handles emergency situations |
+| autoControl() | Controls ventilation |
+| waterControl() | Controls water pump |
+| lightingControl() | Controls smart lighting |
+| Full_AUTO_Mode() | Executes complete automation |
+| reconnect() | Restores MQTT connection |
+
+---
+
+# 🔍 Code Design Philosophy
+
+The firmware follows a modular programming approach.
+
+Instead of placing all logic inside the `loop()` function, each task is isolated into dedicated functions.
+
+This design provides several advantages:
+
+- Better readability
+- Easier debugging
+- Higher scalability
+- Improved maintainability
+- Simple future expansion
+
+Additional sensors or AI modules can be integrated with minimal modifications to the existing code.
+````
+
 ```
 
