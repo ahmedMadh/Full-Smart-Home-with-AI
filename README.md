@@ -223,30 +223,30 @@ The project integrates embedded programming, cloud computing, data engineering, 
 # 📂 Project Structure
 
 ```text
-AI-Smart-Home/
+AI-Smart-Home
 │
-├── Arduino_Code/          
+├── Arduino_Code        
 │   └── sketch.ino
 │
-├── Wokwi_Simulatur_Diagram/          
+├── Wokwi_Simulatur_Diagram          
 │   └── diagram.json
 |
-├── Libraries_Used/          
+├── Libraries_Used          
 │   └── libraries.txt
 |
-├── Project_Link_in_Wokwi/          
+├── Project_Link_in_Wokwi         
 │   └── wokwi-project.txt
 |
-├── Python/                  
+├── Python                
 │   └── server.py
 │
-├── Dataset/             
+├── Dataset             
 │   └── sensor_data.csv
 │
-├── Video/                 
+├── Video                 
 │   └── Arabic Video.mp4
 │
-├── Report/                 
+├── Report                
 │   └── Full_Smart_Home_With_AI_Project_Report.pdf
 │
 └── README.md
