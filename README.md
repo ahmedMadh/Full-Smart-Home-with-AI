@@ -532,59 +532,20 @@ Python receives MQTT data in real time and stores it inside a structured CSV dat
 
 ---
 
-# 🚀 Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/your-username/AI-Smart-Home.git
-```
-
-Navigate into the project directory
-
-```bash
-cd AI-Smart-Home
-```
-
-Install Python dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the Flask server
-
-```bash
-python server.py
-```
-
-Open the Jupyter Notebook
-
-```bash
-jupyter notebook
-```
-
-Upload the ESP32 firmware using Arduino IDE and start monitoring the system.
-
----
-
 # ▶ How to Use
 
-1. Start the ESP32 firmware.
+1. Assemble the project components, ensuring you account for or update the pin numbers in the code.
 
-2. Connect the ESP32 to Wi-Fi.
+2. Paste the code found in skitch.ino into the Arduino IDE.
 
-3. Open the Blynk mobile application.
+3. Install Jupyter via your computer's command prompt using the command: `pip install notebook`.
 
-4. Monitor live data through ThingSpeak.
+4. Launch Jupyter by running the command `jupyter notebook`.
 
-5. Run the MQTT receiver in Python.
+5. Create a file and insert the code found in `Server.py` to set up a local server.
 
-6. Verify that new sensor readings are appended to the CSV dataset.
+6. You can now easily run your system using the Arduino IDE. You will be able to view real-time data and control the system via Blynk IoT, visualize data graphs on ThingSpeak, and observe that the data is saved to a CSV file on your computer.
 
-7. Open the Jupyter Notebook to analyze the collected data.
-
-8. Train or evaluate the Machine Learning model using the generated dataset.
 ````
 
 
