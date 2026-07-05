@@ -86,19 +86,10 @@ Unlike traditional smart home projects, this system is designed not only for mon
 
 - MQTT Communication
 - ThingSpeak Cloud Storage
+- Blynk IoT Server
 - Live Charts
 - CSV Dataset Generation
 - Python Data Pipeline
-
----
-
-## 🧠 Artificial Intelligence
-
-- Dataset Collection
-- Data Cleaning
-- Machine Learning Preparation
-- Prediction Pipeline
-- Future Risk Analysis
 
 ---
 
@@ -207,15 +198,13 @@ The project integrates embedded programming, cloud computing, data engineering, 
 |------------|---------|
 | Arduino IDE | ESP32 programming |
 | Wokwi | Circuit simulation |
-| MQTT (HiveMQ) | Real-time data streaming |
+| MQTT | Real-time data streaming |
 | ThingSpeak | Cloud monitoring platform |
 | Blynk IoT | Remote mobile control |
 | Python | Data processing |
 | Jupyter Notebook | AI development environment |
-| Flask | Local API Server |
 | Pandas | Dataset management |
 | Paho MQTT | MQTT communication |
-| Machine Learning | Data prediction |
 
 ---
 
@@ -362,6 +351,7 @@ Responsible for transmitting sensor readings.
 The ESP32 simultaneously sends data to:
 
 - ThingSpeak
+- Blynk IoT
 - MQTT Broker
 
 This allows the same sensor readings to be used for both live monitoring and AI processing without interfering with each other.
@@ -529,9 +519,9 @@ Emergency actions are executed immediately without waiting for user interaction,
 
 # ☁ Cloud Communication
 
-The ESP32 sends the collected sensor data to two independent cloud services simultaneously.
+The ESP32 unit transmits collected sensor data to three independent cloud services simultaneously.
 
-Each service has a different responsibility within the overall system architecture.
+Each service handles a distinct responsibility within the system's overall architecture.
 
 ---
 
@@ -584,7 +574,8 @@ Unlike ThingSpeak, the MQTT channel is dedicated to collecting structured datase
 
 Python receives MQTT data in real time and stores it inside a structured CSV dataset for analysis.
 
-📷 *(Insert Jupyter Notebook screenshot here)*
+<img width="1355" height="423" alt="Screenshot 2026-07-04 160219" src="https://github.com/user-attachments/assets/529087e4-6519-4e36-b5ea-f3a781aeee50" />
+
 
 ---
 
