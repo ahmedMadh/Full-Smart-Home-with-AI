@@ -569,10 +569,11 @@ ThingSpeak provides a continuously updated visualization dashboard that allows u
 
 ```mermaid
 flowchart LR
-ESP32 --> MQTT_Broker
-MQTT_Broker --> Jupyter Notebook
-Jupyter Notebook --> CSV_Dataset
-CSV_Dataset --> AI_Model
+A[ESP32] --> B[MQTT_Broker]
+B --> C[Jupyter Notebook]
+C --> D[CSV_Dataset]
+D --> M[AI_Model]
+M --> A
 ```
 
 Unlike ThingSpeak, the MQTT channel is dedicated to collecting structured datasets for further processing and Artificial Intelligence applications.
