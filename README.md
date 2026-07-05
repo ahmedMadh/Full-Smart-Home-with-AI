@@ -12,7 +12,6 @@ An intelligent Smart Home platform that combines **ESP32**, **IoT**, **Cloud Com
 ![Blynk](https://img.shields.io/badge/Blynk-IoT-green?style=for-the-badge)
 ![ThingSpeak](https://img.shields.io/badge/ThingSpeak-Cloud-red?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-AI-yellow?style=for-the-badge)
-![Flask](https://img.shields.io/badge/Flask-API-black?style=for-the-badge)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge)
 ![Pandas](https://img.shields.io/badge/Pandas-Data-blueviolet?style=for-the-badge)
 ![Machine Learning](https://img.shields.io/badge/Machine-Learning-purple?style=for-the-badge)
