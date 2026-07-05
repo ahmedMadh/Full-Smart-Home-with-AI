@@ -197,40 +197,56 @@ It demonstrates how IoT and AI can work together within one complete architectur
 
 The smart home system is built using six environmental sensors and multiple actuators connected to an ESP32 development board.
 
+## 🛠 Hardware Architecture
+
 ```mermaid
-flowchart TB
+flowchart LR
 
 subgraph Sensors
-    DHT[DHT22]
-    MQ2[MQ-2]
-    PIR[PIR]
-    LDR[LDR]
-    ULT[Ultrasonic]
+    direction TB
+    DHT["🌡️ DHT22"]
+    MQ2["🔥 MQ-2"]
+    PIR["🚶 PIR"]
+    LDR["💡 LDR"]
+    ULTRA["💧 Ultrasonic"]
 end
 
-subgraph ESP32
-    ESP[ESP32 Controller]
+subgraph Controller
+    ESP["⚡ ESP32"]
 end
 
 subgraph Actuators
-    Fan[Fan]
-    Servo[Smart Window]
-    Pump[Water Pump]
-    Light[Lighting]
-    Alarm[Alarm System]
+    direction TB
+    WINDOW["🪟 Window Servo"]
+    FAN["🌀 Fan Relay"]
+    PUMP["🚰 Water Pump"]
+    LIGHT["💡 Light"]
+    ALARM["🚨 Alarm"]
 end
 
 DHT --> ESP
 MQ2 --> ESP
 PIR --> ESP
 LDR --> ESP
-ULT --> ESP
+ULTRA --> ESP
 
-ESP --> Fan
-ESP --> Servo
-ESP --> Pump
-ESP --> Light
-ESP --> Alarm
+ESP --> WINDOW
+ESP --> FAN
+ESP --> PUMP
+ESP --> LIGHT
+ESP --> ALARM
+
+style ESP fill:#1565C0,color:#fff,stroke:#0D47A1,stroke-width:3px
+style DHT fill:#E3F2FD
+style MQ2 fill:#E3F2FD
+style PIR fill:#E3F2FD
+style LDR fill:#E3F2FD
+style ULTRA fill:#E3F2FD
+style WINDOW fill:#FFF3E0
+style FAN fill:#FFF3E0
+style PUMP fill:#FFF3E0
+style LIGHT fill:#FFF3E0
+style ALARM fill:#FFEBEE
 ```
 
 ---
