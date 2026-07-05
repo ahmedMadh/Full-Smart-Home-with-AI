@@ -261,7 +261,9 @@ The repository is organized so that every project layer is separated into its ow
 Instead of writing all functionality inside one long program, the firmware is divided into logical modules, where each module is responsible for a specific task.
 
 ```text
-<center>
+
+<p align="center">
+
 setup()
 
 ↓
@@ -283,7 +285,9 @@ Connect Blynk
 ↓
 
 Start Sensors
-</center>
+
+</p>
+
 ```
 
 ---
