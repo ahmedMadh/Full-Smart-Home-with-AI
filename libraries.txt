@@ -1,9 +1,11 @@
-# Wokwi Library List
-# See https://docs.wokwi.com/guides/libraries
+#jupyter Library code
 
-# Automatically added based on includes:
+import sys
+!{sys.executable} -m pip install paho-mqtt pandas matplotlib requests
+
+# Wokwi Library you need
+
 DHT sensor library
-
 ESP32Servo
 Blynk
 PubSubClient
