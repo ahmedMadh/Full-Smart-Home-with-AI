@@ -179,9 +179,6 @@ AI-Smart-Home
 ├── Python                
 │   └── server.py
 │
-├── Dataset             
-│   └── sensor_data.csv
-│
 ├── Video                 
 │   └── Arabic Video.mp4
 │
