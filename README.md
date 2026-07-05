@@ -557,7 +557,7 @@ flowchart LR
 A[ESP32] --> B[Wifi]
 B[Wifi] --> C[Blynk Server]
 C[Blynk Server] --> D[Live Data]
-C --> M[An interface that allows the user to control the system.
+C --> M[An interface that allows the user to control the system]
 M --> A
 ```
 
