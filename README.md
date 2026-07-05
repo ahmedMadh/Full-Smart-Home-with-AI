@@ -448,7 +448,277 @@ This design provides several advantages:
 - Simple future expansion
 
 Additional sensors or AI modules can be integrated with minimal modifications to the existing code.
+
+---
+
+# ⚡ Automation Logic
+
+The smart home is designed to make intelligent decisions automatically based on real-time environmental conditions.
+
+Instead of relying solely on user interaction, the ESP32 continuously analyzes sensor readings and executes predefined actions whenever specific conditions are met.
+
+---
+
+## 🌡 Smart Temperature Control
+
+```mermaid
+flowchart TD
+
+A[Read Temperature] --> B{Temperature > 60°C?}
+
+B -- Yes --> C[Fire Detected]
+
+C --> D[Open Window]
+
+D --> E[Turn Fan ON]
+
+E --> F[Activate Alarm]
+
+B -- No --> G{Temperature > 45°C?}
+
+G -- Yes --> H[High Temperature]
+
+H --> I[Open Window]
+
+I --> J[Turn Fan ON]
+
+G -- No --> K[Normal Operation]
+```
+
+The ventilation system automatically reacts to rising temperatures to improve air circulation and reduce potential hazards.
+
+---
+
+## 💧 Water Tank Automation
+
+```mermaid
+flowchart TD
+
+A[Measure Water Level]
+
+A --> B{Water Level Low?}
+
+B -- Yes --> C[Turn Pump ON]
+
+B -- No --> D{Tank Full?}
+
+D -- Yes --> E[Turn Pump OFF]
+
+D -- No --> F[Keep Current State]
+```
+
+The ultrasonic sensor continuously measures the water level, ensuring automatic filling without human intervention.
+
+---
+
+## 💡 Smart Lighting
+
+```mermaid
+flowchart TD
+
+A[Read Light Sensor]
+
+A --> B{Environment Dark?}
+
+B -- No --> C[Light OFF]
+
+B -- Yes --> D{Motion Detected?}
+
+D -- Yes --> E[Light ON]
+
+D -- No --> F[Light OFF]
+```
+
+Lighting is activated only when both darkness and human presence are detected, reducing unnecessary power consumption.
+
+---
+
+## 🚨 Emergency Response
+
+```mermaid
+flowchart TD
+
+A[Read Sensors]
+
+A --> B{Gas Leak OR Fire?}
+
+B -- Yes --> C[Activate Alarm]
+
+C --> D[LED ON]
+
+D --> E[Buzzer ON]
+
+E --> F[Open Window]
+
+F --> G[Fan ON]
+
+B -- No --> H[Return to Safe State]
+```
+
+Emergency actions are executed immediately without waiting for user interaction, increasing system safety.
+
+---
+
+# ☁ Cloud Communication
+
+The ESP32 sends the collected sensor data to two independent cloud services simultaneously.
+
+Each service has a different responsibility within the overall system architecture.
+
+---
+
+## 📊 ThingSpeak Pipeline
+
+```mermaid
+flowchart LR
+
+ESP32 --> HTTP
+
+HTTP --> ThingSpeak
+
+ThingSpeak --> Live Charts
+
+Live Charts --> Remote Monitoring
+```
+
+ThingSpeak provides a continuously updated visualization dashboard that allows users to monitor sensor readings from anywhere.
+
+---
+
+## 📡 MQTT Pipeline
+
+```mermaid
+flowchart LR
+
+ESP32 --> MQTT Broker
+
+MQTT Broker --> Python Client
+
+Python Client --> CSV Dataset
+
+CSV Dataset --> AI Model
+```
+
+Unlike ThingSpeak, the MQTT channel is dedicated to collecting structured datasets for further processing and Artificial Intelligence applications.
+
+---
+
+# 🧠 Artificial Intelligence Pipeline
+
+After collecting sensor readings, the data passes through several processing stages before becoming suitable for Machine Learning.
+
+```mermaid
+flowchart LR
+
+ESP32
+
+--> MQTT
+
+--> Python
+
+--> CSV Dataset
+
+--> Data Cleaning
+
+--> Feature Selection
+
+--> Machine Learning
+
+--> Prediction
+```
+
+The generated dataset forms the foundation for future predictive models capable of analyzing environmental patterns and supporting intelligent decision making.
+
+---
+
+# 📊 Dashboard & Visualization
+
+The project provides multiple visualization methods for monitoring the smart home.
+
+## ThingSpeak
+
+- Live Temperature Chart
+- Live Humidity Chart
+- Live Gas Chart
+- Live Motion Chart
+- Live Light Chart
+- Live Water Level Chart
+
+📷 *(Insert ThingSpeak screenshot here)*
+
+---
+
+## Jupyter Notebook
+
+Python receives MQTT data in real time and stores it inside a structured CSV dataset for analysis.
+
+📷 *(Insert Jupyter Notebook screenshot here)*
+
+---
+
+## AI Dashboard
+
+The processed dataset can later be used to generate visual analytics and prediction results.
+
+📷 *(Insert Dashboard screenshot here)*
+
+---
+
+# 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/your-username/AI-Smart-Home.git
+```
+
+Navigate into the project directory
+
+```bash
+cd AI-Smart-Home
+```
+
+Install Python dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Flask server
+
+```bash
+python server.py
+```
+
+Open the Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Upload the ESP32 firmware using Arduino IDE and start monitoring the system.
+
+---
+
+# ▶ How to Use
+
+1. Start the ESP32 firmware.
+
+2. Connect the ESP32 to Wi-Fi.
+
+3. Open the Blynk mobile application.
+
+4. Monitor live data through ThingSpeak.
+
+5. Run the MQTT receiver in Python.
+
+6. Verify that new sensor readings are appended to the CSV dataset.
+
+7. Open the Jupyter Notebook to analyze the collected data.
+
+8. Train or evaluate the Machine Learning model using the generated dataset.
 ````
+
 
 ```
 
