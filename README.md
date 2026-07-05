@@ -197,19 +197,39 @@ It demonstrates how IoT and AI can work together within one complete architectur
 
 The smart home system is built using six environmental sensors and multiple actuators connected to an ESP32 development board.
 
-| Component | Function |
-|-----------|----------|
-| ESP32 | Main microcontroller responsible for data acquisition, automation, and cloud communication |
-| DHT22 | Measures temperature and humidity |
-| MQ-2 Gas Sensor | Detects gas leakage and smoke concentration |
-| PIR Motion Sensor | Detects human movement |
-| LDR Sensor | Measures ambient light intensity |
-| HC-SR04 Ultrasonic Sensor | Monitors the water tank level |
-| Servo Motor | Opens and closes the smart window |
-| Relay Module | Controls the fan and water pump |
-| LED | Visual alarm indicator |
-| Buzzer | Audible emergency alarm |
+flowchart TB
 
+subgraph Sensors
+DHT[DHT22]
+MQ2[MQ-2]
+PIR[PIR]
+LDR[LDR]
+ULT[Ultrasonic]
+end
+
+subgraph ESP32
+ESP[ESP32 Controller]
+end
+
+subgraph Actuators
+Fan[Fan]
+Servo[Servo]
+Pump[Water Pump]
+Light[Lighting]
+Alarm[Alarm]
+end
+
+DHT --> ESP
+MQ2 --> ESP
+PIR --> ESP
+LDR --> ESP
+ULT --> ESP
+
+ESP --> Fan
+ESP --> Servo
+ESP --> Pump
+ESP --> Light
+ESP --> Alarm
 ---
 
 # 💻 Software Stack
