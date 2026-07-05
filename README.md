@@ -600,32 +600,11 @@ The generated dataset forms the foundation for future predictive models capable 
 
 ---
 
-## 📊 ThingSpeak Dashboard
-
-```mermaid
-flowchart LR
-ESP32 --> HTTP
-HTTP --> ThingSpeak
-ThingSpeak --> Live_Charts
-Live_Charts --> Remote_Monitoring
-
-📷 *(Insert ThingSpeak screenshot here)*
-
----
-
 ## Jupyter Notebook
 
 Python receives MQTT data in real time and stores it inside a structured CSV dataset for analysis.
 
 📷 *(Insert Jupyter Notebook screenshot here)*
-
----
-
-## AI Dashboard
-
-The processed dataset can later be used to generate visual analytics and prediction results.
-
-📷 *(Insert Dashboard screenshot here)*
 
 ---
 
