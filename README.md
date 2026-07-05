@@ -225,25 +225,29 @@ The project integrates embedded programming, cloud computing, data engineering, 
 ```text
 AI-Smart-Home/
 │
-├── Arduino_Code/            # كود ESP32 / Arduino
-│   └── smart_home.ino
+├── Arduino_Code/          
+│   └── sketch.ino
 │
-├── Python/                  # بايثون (MQTT + AI + Dashboard)
-│   ├── mqtt_receiver.py
-│   ├── server.py
-│   ├── dashboard.ipynb
-│   └── ai_model.ipynb
+├── Wokwi_Simulatur_Diagram/          
+│   └── diagram.json
+|
+├── Libraries_Used/          
+│   └── libraries.txt
+|
+├── Project_Link_in_Wokwi/          
+│   └── wokwi-project.txt
+|
+├── Python/                  
+│   └── server.py
 │
-├── Dataset/                 # بيانات الحساسات
+├── Dataset/             
 │   └── sensor_data.csv
 │
-├── Images/                  # صور المشروع والداشبورد
+├── Video/                 
+│   └── Arabic Video.mp4
 │
-├── Video/                   # فيديو شرح المشروع (مهم جدًا)
-│   └── demo.mp4
-│
-├── Report/                  # تقرير PDF
-│   └── AI_Full_Smart_Home_Project_Report.pdf
+├── Report/                 
+│   └── Full_Smart_Home_With_AI_Project_Report.pdf
 │
 └── README.md
 ```
