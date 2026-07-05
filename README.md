@@ -139,7 +139,7 @@ The smart home system is built using six environmental sensors and multiple actu
 Illustrative image from the Wokwi simulator.
 ![Uploading Screenshot 2026-07-04 160312.png…]()
 
-```
+
 
 ---
 
