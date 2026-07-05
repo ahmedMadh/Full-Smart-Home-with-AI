@@ -606,12 +606,14 @@ The project provides multiple visualization methods for monitoring the smart hom
 
 ## ThingSpeak
 
+```mermaid
 - Live Temperature Chart
 - Live Humidity Chart
 - Live Gas Chart
 - Live Motion Chart
 - Live Light Chart
 - Live Water Level Chart
+```
 
 📷 *(Insert ThingSpeak screenshot here)*
 
