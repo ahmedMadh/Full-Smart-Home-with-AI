@@ -230,6 +230,7 @@ ESP --> Servo
 ESP --> Pump
 ESP --> Light
 ESP --> Alarm
+
 ---
 
 # 💻 Software Stack
