@@ -559,7 +559,6 @@ Python receives MQTT data in real time and stores it inside a structured CSV dat
 - 🧠 Analyze data using Jupyter Notebook
 
 ```
----
 
 ---
 
