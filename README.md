@@ -46,12 +46,13 @@ An intelligent Smart Home platform that combines **ESP32**, **IoT**, **Cloud Com
 
 AI Smart Home is a complete Internet of Things (IoT) platform that monitors environmental conditions inside a smart house while providing both automatic and manual control over connected devices.
 
-The project combines two independent cloud communication methods:
+The ESP32 simultaneously communicates with three independent platforms, each serving a different purpose:
 
-- **ThingSpeak** for real-time cloud visualization.
-- **MQTT** for continuous data streaming into Python.
+- 📱 **Blynk IoT** – Real-time manual control and device monitoring.
+- ☁️ **ThingSpeak** – Cloud-based visualization through live sensor charts.
+- 📡 **MQTT** – Streaming sensor data directly to a Python environment for dataset generation and AI analysis.
 
-Sensor readings are automatically collected by the ESP32 and transmitted to multiple destinations simultaneously. The stored dataset is later analyzed using Machine Learning techniques inside Jupyter Notebook.
+Each communication channel operates independently while receiving the same sensor data directly from the ESP32.
 
 Unlike traditional smart home projects, this system is designed not only for monitoring but also for creating a structured AI-ready dataset capable of supporting predictive analytics.
 
@@ -153,31 +154,34 @@ Unlike traditional smart home projects, this system is designed not only for mon
 
 # 🔄 Complete Data Flow
 
-```text
-Sensors
-      │
-      ▼
-ESP32 Controller
-      │
-      ├────────► ThingSpeak
-      │              │
-      │              ▼
-      │       Live Cloud Charts
-      │
-      │
-      └────────► MQTT Broker
-                     │
-                     ▼
-             Jupyter Notebook
-                     │
-                     ▼
-              CSV Dataset Storage
-                     │
-                     ▼
-             Machine Learning Model
-                     │
-                     ▼
-                Future Prediction
+```mermaid
+flowchart LR
+
+subgraph Smart Home
+SENSORS["🌡️ Sensors"]
+ESP["⚡ ESP32"]
+SENSORS --> ESP
+end
+
+subgraph Cloud Services
+BLYNK["📱 Blynk"]
+TS["☁️ ThingSpeak"]
+MQTT["📡 MQTT Broker"]
+end
+
+subgraph AI Platform
+PY["🐍 Python"]
+CSV["📄 CSV Dataset"]
+ML["🧠 Machine Learning"]
+end
+
+ESP --> BLYNK
+ESP --> TS
+ESP --> MQTT
+
+MQTT --> PY
+PY --> CSV
+CSV --> ML
 ```
 
 ---
